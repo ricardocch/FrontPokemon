@@ -2,7 +2,7 @@
 export  function getTotalPokemons() {
 
   return function(dispatch){
-    fetch('http://www.localhost:3001/pokemons')
+    fetch('https://ricardocch-pokemon-pi.herokuapp.com/pokemons')
     .then(response => response.json())
     .then(json => {
       
@@ -18,7 +18,7 @@ export  function getTotalPokemons() {
 export  function getTypes() {
 
   return function(dispatch){
-    fetch('http://www.localhost:3001/types')
+    fetch('https://ricardocch-pokemon-pi.herokuapp.com/types')
     .then(response => response.json())
     .then(json => {
       
@@ -34,7 +34,7 @@ export  function getTypes() {
 export  function getByID(id) {
 
   return function(dispatch){
-    fetch(`http://www.localhost:3001/pokemons/${id}`)
+    fetch(`https://ricardocch-pokemon-pi.herokuapp.com/pokemons/${id}`)
     .then(response => response.json())
     .then(json => {
       
@@ -49,7 +49,7 @@ export  function getByID(id) {
 
 export function getByName(name) {
   return function(dispatch){
-    fetch(`http://www.localhost:3001/pokemons?name=${name}`)
+    fetch(`https://ricardocch-pokemon-pi.herokuapp.com/pokemons?name=${name}`)
     .then(response => response.json())
     .then(json => {
       
@@ -64,7 +64,7 @@ export function getByName(name) {
 export  function createPokemon(data) {
 
   return function(dispatch){
-    fetch('http://www.localhost:3001/pokemons',{
+    fetch('https://ricardocch-pokemon-pi.herokuapp.com/pokemons',{
       method: 'POST', 
       headers: {
         'Content-Type': 'application/json'
